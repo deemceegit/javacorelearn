@@ -1,0 +1,139 @@
+Apr 13, 2026 2:43:13 PM deemcee.Network.Server loadConfig
+WARNING: Không thể tải config
+java.io.FileNotFoundException: config.properties (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:159)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at deemcee.Network.Server.loadConfig(Server.java:56)
+	at deemcee.Network.Server.<init>(Server.java:13)
+	at deemcee.Network.Server.main(Server.java:76)
+
+Apr 13, 2026 2:47:26 PM deemcee.Network.Server loadConfig
+WARNING: Không thể tải config
+java.io.FileNotFoundException: config.properties (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:159)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at deemcee.Network.Server.loadConfig(Server.java:56)
+	at deemcee.Network.Server.<init>(Server.java:13)
+	at deemcee.Network.Server.main(Server.java:76)
+
+Apr 13, 2026 3:24:44 PM deemcee.Network.Server loadConfig
+WARNING: Không thể tải config
+java.io.FileNotFoundException: config.properties (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:159)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at deemcee.Network.Server.loadConfig(Server.java:82)
+	at deemcee.Network.Server.<init>(Server.java:14)
+	at deemcee.Network.Server.main(Server.java:102)
+
+Apr 13, 2026 3:26:14 PM deemcee.Network.Server loadConfig
+WARNING: Không thể tải config
+java.io.FileNotFoundException: config.properties (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:159)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at deemcee.Network.Server.loadConfig(Server.java:81)
+	at deemcee.Network.Server.<init>(Server.java:14)
+	at deemcee.Network.Server.main(Server.java:101)
+
+Apr 13, 2026 3:26:58 PM deemcee.Network.Server <init>
+SEVERE: Lỗi Server
+java.net.SocketException: An established connection was aborted by the software in your host machine
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:54)
+	at java.base/sun.nio.ch.NioSocketImpl.tryWrite(NioSocketImpl.java:394)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:410)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.implWrite(Socket.java:1231)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1218)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:125)
+	at java.base/java.io.BufferedOutputStream.implFlush(BufferedOutputStream.java:252)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:240)
+	at java.base/java.io.DataOutputStream.flush(DataOutputStream.java:134)
+	at deemcee.Network.Server.<init>(Server.java:61)
+	at deemcee.Network.Server.main(Server.java:101)
+
+Apr 13, 2026 3:29:03 PM deemcee.Network.Server loadConfig
+WARNING: Không thể tải config
+java.io.FileNotFoundException: config.properties (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:159)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at deemcee.Network.Server.loadConfig(Server.java:81)
+	at deemcee.Network.Server.<init>(Server.java:14)
+	at deemcee.Network.Server.main(Server.java:101)
+
+Apr 13, 2026 3:30:49 PM deemcee.Network.Server loadConfig
+WARNING: Không thể tải config
+java.io.FileNotFoundException: config.properties (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:159)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at deemcee.Network.Server.loadConfig(Server.java:81)
+	at deemcee.Network.Server.<init>(Server.java:14)
+	at deemcee.Network.Server.main(Server.java:101)
+
+Apr 13, 2026 3:31:22 PM deemcee.Network.Server loadConfig
+WARNING: Không thể tải config
+java.io.FileNotFoundException: config.properties (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:159)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at deemcee.Network.Server.loadConfig(Server.java:81)
+	at deemcee.Network.Server.<init>(Server.java:14)
+	at deemcee.Network.Server.main(Server.java:101)
+
+Apr 13, 2026 3:35:11 PM deemcee.Network.Server loadConfig
+WARNING: Không thể tải config
+java.io.FileNotFoundException: config.properties (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:159)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at deemcee.Network.Server.loadConfig(Server.java:82)
+	at deemcee.Network.Server.<init>(Server.java:14)
+	at deemcee.Network.Server.main(Server.java:102)
+
+Apr 13, 2026 3:36:05 PM deemcee.Network.Server loadConfig
+WARNING: Không thể tải config
+java.io.FileNotFoundException: config.properties (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:159)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at deemcee.Network.Server.loadConfig(Server.java:82)
+	at deemcee.Network.Server.<init>(Server.java:14)
+	at deemcee.Network.Server.main(Server.java:102)
+
+Apr 13, 2026 3:37:52 PM deemcee.Network.Server loadConfig
+WARNING: Không thể tải config
+java.io.FileNotFoundException: config.properties (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:159)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at deemcee.Network.Server.loadConfig(Server.java:81)
+	at deemcee.Network.Server.<init>(Server.java:14)
+	at deemcee.Network.Server.main(Server.java:101)
+
+Apr 13, 2026 3:39:56 PM deemcee.Network.Server loadConfig
+WARNING: Không thể tải config
+java.io.FileNotFoundException: config.properties (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:159)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at deemcee.Network.Server.loadConfig(Server.java:81)
+	at deemcee.Network.Server.<init>(Server.java:14)
+	at deemcee.Network.Server.main(Server.java:101)
+

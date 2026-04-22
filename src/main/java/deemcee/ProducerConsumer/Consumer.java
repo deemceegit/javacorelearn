@@ -13,7 +13,7 @@ class Consumer implements Runnable {
             Thread.sleep(10000L);
             while (true) {
                 Message msg = queue.take();     //.poll() + return msg
-                Thread.sleep(10000L);
+                Thread.sleep(3000L);
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();

@@ -63,8 +63,6 @@ public class Server {
                     if (sentMsg.equalsIgnoreCase("Over")) {
                         break;
                     }
-
-                    // Dừng 1 giây giữa các lần gửi để bạn có thời gian "rút dây mạng" test thử
                 }
                 s.close();
                 System.exit(0);

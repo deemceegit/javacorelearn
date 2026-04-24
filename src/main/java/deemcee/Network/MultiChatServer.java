@@ -125,3 +125,10 @@ class ClientHandler implements Runnable {
         }
     }
 }
+
+//set 'serverSocket'
+//continous wait for Client -> accept a client
+//add that client to  a List
+//run thread clientHandler (continuosly)
+//      read stream
+//      broadcast to ClientS: write stream

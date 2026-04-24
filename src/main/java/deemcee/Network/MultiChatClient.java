@@ -80,3 +80,16 @@ public class MultiChatClient {
         }
     }
 }
+
+//read username from keyboard
+//connect 'socket' to Server (IP, port)
+//get IO streams
+//send username to Server first
+//run thread 'readThread' (to listen to Server)
+//      loop continuously:
+//          read incoming message from Server stream -> print to screen
+//[Main Thread] loop continuously (to send message)
+//      read message from keyboard
+//      if message == "quit" -> break loop
+//      write message to Server stream
+//close socket & exit

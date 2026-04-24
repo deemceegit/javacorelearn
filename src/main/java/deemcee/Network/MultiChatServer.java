@@ -4,14 +4,14 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import java.util.logging.FileHandler;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
 public class MultiChatServer {
-    private static final Logger logger = Logger.getLogger(Server.class.getName());
-
     // list to save outputStream so Serv can send message to Cli
     private static List<DataOutputStream> clientWriters = new ArrayList<>();
+    public static final Logger logger = Logger.getLogger(MultiChatServer.class.getName());
 
     public static void main(String[] args) {
         setupLogger();
@@ -25,7 +25,7 @@ public class MultiChatServer {
             while (true) {
                 Socket clientSocket = serverSocket.accept();
                 logger.info("accept Client socket: " + clientSocket + clientSocket.getInetAddress());
-                System.out.println("new Client connected: " + clientSocket.getInetAddress());
+                System.out.println("new Client connected: " + clientSocket.getInetAddress().toString() + ":" + clientSocket.getPort());
 
                 DataOutputStream out = new DataOutputStream(clientSocket.getOutputStream());
 
@@ -40,6 +40,7 @@ public class MultiChatServer {
             }
         } catch (IOException e) {
             System.out.println("Server Error: " + e.getMessage());
+            logger.log(Level.SEVERE, "Severe crash server", e);
         }
     }
 
@@ -54,6 +55,7 @@ public class MultiChatServer {
                         out.flush();
                     } catch (IOException e) {
                         e.printStackTrace();
+                        logger.log(Level.WARNING, "Error broadcast messages", e);
                     }
                 }
             }
@@ -69,11 +71,11 @@ public class MultiChatServer {
 
     private static void setupLogger() {
         try {
-            FileHandler fh = new FileHandler("server_error.log", true);
+            FileHandler fh = new FileHandler("server.log", true);
             fh.setFormatter(new SimpleFormatter());
             logger.addHandler(fh);
         } catch (IOException e) {
-            System.out.println("Không thể thiết lập file log cho Server.");
+            System.out.println("can not initiate log for Server");
         }
     }
 }
@@ -91,14 +93,16 @@ class ClientHandler implements Runnable {
             this.in = new DataInputStream(socket.getInputStream());
         } catch (IOException e) {
             e.printStackTrace();
+            MultiChatServer.logger.log(Level.SEVERE, "Error create IO Stream for Client " + socket.getInetAddress().toString() + ":" + socket.getPort(), e);
         }
     }
 
     @Override
     public void run() {
+        String clientName = "";
         try {
             // Username of client
-            String clientName = in.readUTF();
+            clientName = in.readUTF();
             MultiChatServer.broadcastMessage("--- " + clientName + " joined chat ---", out);
 
             // constantly listen to client message
@@ -112,6 +116,7 @@ class ClientHandler implements Runnable {
         } finally {
             // client exit
             MultiChatServer.removeClient(out);
+            MultiChatServer.logger.info("EXITED: User '" + clientName + "' (" + socket.getInetAddress().toString() + ":" + socket.getPort() + ") quit room.");
             try {
                 socket.close();
             } catch (IOException e) {

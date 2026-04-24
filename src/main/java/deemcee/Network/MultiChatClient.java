@@ -3,9 +3,16 @@ package deemcee.Network;
 import java.io.*;
 import java.net.*;
 import java.util.Scanner;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 public class MultiChatClient {
+    private static final Logger logger = Logger.getLogger(MultiChatClient.class.getName());
+
     public static void main(String[] args) {
+        setupLogger();
         String ip = "127.0.0.1";
         int port = 5000;
         Scanner scanner = new Scanner(System.in);
@@ -22,6 +29,8 @@ public class MultiChatClient {
             out.flush();
             System.out.println("start chatting");
 
+            logger.info("CONNECTED: '" + myName + "' connected successfully to Server " + ip + ":" + port);
+
             // thread to listen
             Thread readThread = new Thread(() -> {
                 try {
@@ -32,6 +41,7 @@ public class MultiChatClient {
                     }
                 } catch (IOException e) {
                     System.out.println("\nDisconnected from server.");
+                    logger.warning("DISCONNECTED: " + e.getMessage());
                 }
             });
             readThread.start();
@@ -43,6 +53,7 @@ public class MultiChatClient {
 
                 if (outgoingMsg.equalsIgnoreCase("quit")) {
                     System.out.println("Exiting...");
+                    logger.info("QUIT: '" + myName + "' quit the chatroom");
                     break;
                 }
 
@@ -55,6 +66,17 @@ public class MultiChatClient {
 
         } catch (IOException e) {
             System.out.println("Cannot connect to Server");
+            logger.log(Level.SEVERE, "CONNECTION FAILED: Unable to connect to Server " + ip + ":" + port, e);
+        }
+    }
+
+    private static void setupLogger() {
+        try {
+            FileHandler fh = new FileHandler("client.log", true);
+            fh.setFormatter(new SimpleFormatter());
+            logger.addHandler(fh);
+        } catch (IOException e) {
+            System.out.println("can not initiate log for Client.");
         }
     }
 }

@@ -15,12 +15,16 @@ public class Run {
 
         ExecutorService pool = Executors.newFixedThreadPool(5);
 
-        pool.execute(new Producer(messageQueue));
-        pool.execute(new Producer(messageQueue));
+//        ExecutorService producerPool = Executors.newFixedThreadPool(2);
+//        ExecutorService consumerPool = Executors.newFixedThreadPool(3);
 
-        pool.execute(new Consumer(messageQueue));
-        pool.execute(new Consumer(messageQueue));
-        pool.execute(new Consumer(messageQueue));
+        for (int i = 0; i < 2; i++) {
+            pool.execute(new Producer(messageQueue));
+        }
+
+        for (int i = 0; i < 3; i++) {
+            pool.execute(new Consumer(messageQueue));
+        }
 
         pool.shutdown();
     }

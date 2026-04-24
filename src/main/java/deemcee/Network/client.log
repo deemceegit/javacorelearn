@@ -1,0 +1,4 @@
+Apr 24, 2026 1:51:58 PM deemcee.Network.MultiChatClient main
+INFO: CONNECTED: 'AAAA' connected successfully to Server 127.0.0.1:5000
+Apr 24, 2026 1:52:37 PM deemcee.Network.MultiChatClient lambda$main$0
+WARNING: DISCONNECTED: Socket closed

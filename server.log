@@ -1,0 +1,8 @@
+Apr 24, 2026 1:47:30 PM deemcee.Network.MultiChatServer main
+INFO: Server run on port 5000
+Apr 24, 2026 1:47:51 PM deemcee.Network.MultiChatServer main
+INFO: accept Client socket: Socket[addr=/127.0.0.1,port=50298,localport=5000]/127.0.0.1
+Apr 24, 2026 1:54:24 PM deemcee.Network.MultiChatServer main
+INFO: Server run on port 5000
+Apr 24, 2026 1:54:29 PM deemcee.Network.MultiChatServer main
+INFO: accept Client socket: Socket[addr=/127.0.0.1,port=50353,localport=5000]/127.0.0.1

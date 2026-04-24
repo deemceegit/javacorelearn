@@ -52,6 +52,7 @@ public class MultiChatServer {
                 if (out != excludeOut) {
                     try {
                         out.writeUTF(message);
+                        MultiChatServer.logger.info("BROADCAST: " + message);
                         out.flush();
                     } catch (IOException e) {
                         e.printStackTrace();
@@ -103,11 +104,17 @@ class ClientHandler implements Runnable {
         try {
             // Username of client
             clientName = in.readUTF();
+            MultiChatServer.logger.info("JOIN: '" + clientName + "' from "
+                    + socket.getInetAddress() + ":" + socket.getPort());
             MultiChatServer.broadcastMessage("--- " + clientName + " joined chat ---", out);
 
             // constantly listen to client message
             while (true) {
                 String message = in.readUTF();
+
+                //log everything on server 
+                MultiChatServer.logger.info("MSG from '" + clientName + "': " + message);
+
                 // broadcast message to everyone
                 MultiChatServer.broadcastMessage("[" + clientName + "]: " + message, out);
             }
